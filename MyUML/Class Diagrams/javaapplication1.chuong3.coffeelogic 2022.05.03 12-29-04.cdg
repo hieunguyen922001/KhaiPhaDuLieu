@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="javaapplication1.chuong3.coffeelogic">
+  <ClassDiagramComponents>
+    <Class name="CoffeeShop" package="javaapplication1.chuong3.coffeelogic" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="address"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="address"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Manager" package="javaapplication1.chuong3.coffeelogic" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="shops" type="CoffeeShop[]" visibility="private"/>
+        <Field name="income" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="CoffeeShop[]" name="shops"/>
+          <Argument type="double" name="income"/>
+          <Argument type="String" name="hoten"/>
+          <Argument type="int" name="gioitinh"/>
+          <Argument type="Date" name="ngaysinh"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getShops" returnType="CoffeeShop[]" visibility="public"/>
+        <Method name="setShops" returnType="void" visibility="public">
+          <Argument type="CoffeeShop[]" name="shops"/>
+        </Method>
+        <Method name="getIncome" returnType="double" visibility="public"/>
+        <Method name="setIncome" returnType="void" visibility="public">
+          <Argument type="double" name="income"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Person" package="javaapplication1.chuong3.coffeelogic" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="hoten" type="String" visibility="private"/>
+        <Field name="gioitinh" type="int" visibility="private"/>
+        <Field name="ngaysinh" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="hoten"/>
+          <Argument type="int" name="gioitinh"/>
+          <Argument type="Date" name="ngaysinh"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getHoten" returnType="String" visibility="public"/>
+        <Method name="setHoten" returnType="void" visibility="public">
+          <Argument type="String" name="hoten"/>
+        </Method>
+        <Method name="getGioitinh" returnType="int" visibility="public"/>
+        <Method name="setGioitinh" returnType="void" visibility="public">
+          <Argument type="int" name="gioitinh"/>
+        </Method>
+        <Method name="getNgaysinh" returnType="Date" visibility="public"/>
+        <Method name="setNgaysinh" returnType="void" visibility="public">
+          <Argument type="Date" name="ngaysinh"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="javaapplication1.chuong3.coffeelogic.Manager" target="javaapplication1.chuong3.coffeelogic.Person"/>
+    <UseRelation source="javaapplication1.chuong3.coffeelogic.Manager" target="javaapplication1.chuong3.coffeelogic.CoffeeShop" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
